@@ -11,8 +11,9 @@ spl_autoload_register(function ($class) {
     }
 });
 
-$router = new Router();
+session_start();
 
+$router = new Router();
 $router->run();
 
 
