@@ -7,14 +7,10 @@ return [
     ],
     'account/login' => [
         'controller' => 'account',
-    'action' => 'login',
-        ],
+        'action' => 'login',
+    ],
     'account/register' => [
         'controller' => 'account',
         'action' => 'register',
     ],
-    'news/show' => [
-    'controller' => 'account',
-    'action' => 'login',
-        ],
 ];
