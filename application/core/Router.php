@@ -42,13 +42,13 @@ class Router
                     $controller = new $path($this->params);
                     $controller->$action();
                 } else {
-                    echo 'Не найден экшен: ' . $action;
+                    View::errorCode(404);
                 }
             } else {
-                echo 'Не найден контроллер: ' . $path;
+                View::errorCode(404);
             }
         } else {
-            echo 'Маршрут не найден';
+            View::errorCode(404);
         }
     }
 
