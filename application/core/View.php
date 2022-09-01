@@ -37,9 +37,19 @@ class View
         http_response_code($code);
         $path = 'application/views/errors/' . $code . '.php';
         if (file_exists($path)) {
-        require $path;
+            require $path;
         }
         exit;
+    }
+
+    public function message($status, $message)
+    {
+        exit(json_encode(['status' => $status, 'message' => $message]));
+    }
+
+    public function location($url)
+    {
+        exit(json_encode(['url' => $url]));
     }
 
 }
